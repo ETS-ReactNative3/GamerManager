@@ -13,12 +13,12 @@ class App extends Component {
 }
 
 const USERS = [
-  {name: 'Burak', surname: 'Kalafat', userName: 'KaRaMbA', numberOfGames: 3},
-  {name: 'Hasan', surname: 'Şahin', userName: 'Maniac', numberOfGames: 9},
-  {name: 'Kadir', surname: 'Çepni', userName: 'Desperado', numberOfGames: 4},
-  {name: 'İsmailcan', surname: 'Sarıkoç', userName: 'ican', numberOfGames: 7},
-  {name: 'Abdulkadir', surname: 'Sarıkoç', userName: 'bylaz', numberOfGames: 8},
-  {name: 'Abdurrahman', surname: 'Köken', userName: 'aakoken', numberOfGames: 6}
+  {name: 'Burak', surname: 'Kalafat', username: 'KaRaMbA', numberOfGames: 3},
+  {name: 'Hasan', surname: 'Şahin', username: 'Maniac', numberOfGames: 9},
+  {name: 'Kadir', surname: 'Çepni', username: 'Desperado', numberOfGames: 4},
+  {name: 'İsmailcan', surname: 'Sarıkoç', username: 'ican', numberOfGames: 7},
+  {name: 'Abdulkadir', surname: 'Sarıkoç', username: 'bylaz', numberOfGames: 8},
+  {name: 'Abdurrahman', surname: 'Köken', username: 'aakoken', numberOfGames: 6}
 ];
 
 export default App;

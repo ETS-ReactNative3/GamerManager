@@ -1,12 +1,12 @@
 import React from 'react'
 function UserList(props) {
   return (
-    <div class="div">
-    <table class="table" align="center">
+    <div className="div">
+    <ol align="center">
       {props.users.map(user => (
-        <tbody>{user.userName} played {user.numberOfGames} games. </tbody>
+        <li key={user.username} >{user.username} played {user.numberOfGames} games. </li>
       ))}
-    </table>
+    </ol>
       <button>Hide/Show number of games played</button>
     </div>
   )
