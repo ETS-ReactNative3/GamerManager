@@ -31,20 +31,21 @@ class UserRegister extends Component {
   };
 
   addUser = event => {
-    event.preventDefault();
+    event.preventDefault();    
     this.props.onAddUser(this.state.user);
   }
 
   isAnyInputEmpty = () => {
-    return this.state.name === '' || this.state.surname === '' || this.state.username === '' ;
+    return this.state.user.name === '' || this.state.user.surname === '' || this.state.user.username === '' ;
   };
 
   render() {
     return (
       <form onSubmit={this.addUser}>
-         <input type="text" placeholder="Name" onChange={this.nameChange} value={this.state.user.name} />
-         <input type="text" placeholder="Surname" onChange={this.surnameChange} value={this.state.user.surname} /> 
+        <input type="text" placeholder="Name" onChange={this.nameChange} value={this.state.user.name} />
+        <input type="text" placeholder="Surname" onChange={this.surnameChange} value={this.state.user.surname} /> 
         <input type="text" placeholder="Username" onChange={this.usernameChange} value={this.state.user.username} />
+        
         <button disabled={this.isAnyInputEmpty()} >Add</button>
       </form>
     )
@@ -52,7 +53,7 @@ class UserRegister extends Component {
 }
 
 UserRegister.propTypes = {
-  onAddUser: PropTypes.func.isRequired,
+  onAddUser: PropTypes.func.isRequired
 };
 
 export default UserRegister

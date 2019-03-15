@@ -5,17 +5,20 @@ import UserList from './UserList'
 class UserManager extends Component {
   
   state = {
-    users: [ {user: {
-       name: '' ,
-       surname: '',
-       username: '',
-       numberOfGames: 0}
-    }]
-    
+    users: []
   };
+ 
   
   handleAddUser = user => {
-    this.setState(prevState => ({ users: [...prevState.users, user] }));
+    
+    let filteredUsers = this.state.users.filter(x=> x.username === user.username);
+    
+    if(filteredUsers.length === 0) {
+      this.setState(prevState => ({ users: [...prevState.users, user] }));
+    }
+    else {
+      alert(`${user.username} have been added!`);
+    }
   };
   
   render() {
